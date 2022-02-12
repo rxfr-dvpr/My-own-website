@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Old Standard TT', serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-bg-color: #181511;
+    --main-font-color: #FFAE2B;
+    --second-font-color: #ACA592;
+}
+
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: var(--main-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 26px;
+    background: var(--main-font-color);
+    box-shadow: 0 0 2px black;
+}
+
+/* header start */
+
+.header__nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: var(--main-bg-color);
+    padding: 14px 0;
+    z-index: 9999;
+    box-shadow: black 0px 8px 15px;
+}
+
+.header__nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 35px;
+}
+
+.logo {
+    font-size: 22px;
+    color: var(--main-font-color);
+    font-weight: 400;
+}
+
+.nav-link-list {
+    display: flex;
+    column-gap: 25px;
+    align-items: center;
+}
+
+.nav__link {
+    color: var(--second-font-color);
+    font-size: 17px;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.nav__link:hover {
+    color: var(--main-font-color);
+}
+
+.nav__link.active {
+    color: var(--main-font-color);
+}
+
+.buy-temp-link {
+    width: 147px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--main-font-color);
+    color: var(--main-font-color);
+    font-size: 12px;
+    transition: .4s;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.buy-temp-link:hover {
+    color: black;
+}
+
+
+.buy-temp-link::after {
+    content: '';
+    height: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: .4s;
+    width: 100%;
+    background: var(--main-font-color);
+    z-index: -1;
+}
+
+.buy-temp-link:hover::after {
+    height: 100%;
+}
+
+
+.header__content {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../img/header/bg.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.header__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 250px;
+    padding-bottom: 180px;
+    row-gap: 35px;
+}
+
+.header__title {
+    font-size: calc(32px + 38 * (100vw / 1920));
+    color: white;
+    padding: 0 165px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header__title::before {
+    content: 'WE ARE Atelier Creative Agency';
+    text-transform: uppercase;
+    color: var(--main-font-color);
+    font-size: 12px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: -30px;
+}
+
+.view-link {
+    width: 143px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background: var(--main-font-color);
+    color:  var(--main-bg-color);
+    transition: .4s;
+}
+
+.view-link:hover {
+    background: transparent;
+    border: solid 1px var(--main-font-color);
+    color: var(--main-font-color);
+}
+
+/* header end */
+
+
+/* main start */
+
+main {
+    background: var(--main-bg-color);
+}
+
+.template-pages__section {
+    padding: 120px 0;
+}
+
+.template-pages__title {
+    text-align: center;
+    font-size: 60px;
+    color: var(--main-font-color);
+    font-weight: 400;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.template-pages__title::before {
+    content: 'Our Core Layouts';
+    transform: translateY(-15px);
+    color: var(--second-font-color);
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+.template-links__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+
+.template__content {
+    max-width: 387px;
+    width: 100%;
+    border: solid 1px #4B4136;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    row-gap: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.template__content::after {
+    content: 'View';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: rgba(255, 174, 43, 0.9);
+    transition: .6s;
+    color: var(--main-bg-color);
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.template__content:hover::after {
+    width: 100%;
+}
+
+
+.template-img {
+    width: 100%;
+    max-height: 190px;
+    filter: drop-shadow(0px 10px 12px rgba(0, 0, 0, 1));
+    padding: 0 40px;
+}
+
+.template-name {
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+.big-photo__container {
+    max-width: 1470px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.big-img {
+    max-width: 1440px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+}
+
+
+
+
+
+.service__section {
+    padding: 120px 0;
+}
+
+.services__title {
+    color: var(--main-font-color);
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+} 
+
+.services__title::before {
+    content: 'Our Core Features';
+    font-size: 14px;
+    color: #ACA592;
+    letter-spacing: 2px;
+    transform: translateY(-10px);
+}
+
+.services__content-box {
+    display: flex;
+    justify-content: center;
+}
+
+.services__content {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: #4B4136 solid 1px;
+    padding: 60px 0 60px 60px;
+    transition: .4s;
+    box-shadow: 0 0 15px black;
+}
+
+.service__content-title {
+    color: var(--main-font-color);
+    font-size: 29px;
+    font-weight: 400;
+    margin: 20px 0 10px 0;
+}
+
+.service__text {
+    color: #ACA592;
+    font-size: 15px;
+    font-weight: 400;
+    max-width: 200px;
+    line-height: 26px;
+}
+
+.services__content:hover {
+    transform: translateY(20px);
+}
+
+
+
+
+/* main end */
+
