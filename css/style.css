@@ -343,6 +343,10 @@ main {
     transform: translateY(20px);
 }
 
+.services__content.active {
+    transform: translateY(20px);
+}
+
 
 
 
