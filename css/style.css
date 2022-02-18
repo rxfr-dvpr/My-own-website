@@ -186,7 +186,7 @@ main {
 
 .template-pages__title {
     text-align: center;
-    font-size: 60px;
+    font-size: calc(32px + 38 * (100vw / 1920));
     color: var(--main-font-color);
     font-weight: 400;
     margin-bottom: 60px;
@@ -211,6 +211,7 @@ main {
     grid-template-rows: repeat(3, 1fr);
     column-gap: 20px;
     row-gap: 20px;
+    place-items: center;
 }
 
 
@@ -259,6 +260,7 @@ main {
     font-size: 13px;
     color: white;
     text-transform: uppercase;
+    text-align: center;
 }
 
 
@@ -290,7 +292,7 @@ main {
 
 .services__title {
     color: var(--main-font-color);
-    font-size: 60px;
+    font-size: calc(32px + 38 * (100vw / 1920));
     font-weight: 400;
     text-align: center;
     display: flex;
@@ -310,6 +312,8 @@ main {
 .services__content-box {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 25px;
 }
 
 .services__content {
@@ -362,7 +366,7 @@ main {
 
 
 .subscribe__title {
-    font-size: 60px;
+    font-size: calc(32px + 38 * (100vw / 1920));
     color: var(--main-font-color);
     font-weight: 400;
     text-align: center;
@@ -430,6 +434,7 @@ main {
     font-weight: 400;
     color: var(--second-font-color);
     margin-bottom: 40px;
+    text-align: center;
 }
 
 
